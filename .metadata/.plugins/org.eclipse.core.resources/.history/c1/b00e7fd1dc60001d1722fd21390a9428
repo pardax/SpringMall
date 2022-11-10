@@ -1,0 +1,5 @@
+package kr.inhatc.spring.item.entity;
+
+public class ItemImg {
+
+}

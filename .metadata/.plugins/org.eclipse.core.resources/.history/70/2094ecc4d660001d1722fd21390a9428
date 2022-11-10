@@ -1,0 +1,5 @@
+package kr.inhatc.spring.utils.entity;
+
+public abstract class BaseEntity {
+
+}

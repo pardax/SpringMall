@@ -1,0 +1,10 @@
+package kr.inhatc.spring.utils.entity;
+
+import javax.persistence.EntityListeners;
+
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+@EntityListeners(value = { AuditingEntityListenern })
+public abstract class BaseTimeEntity {
+		
+}
