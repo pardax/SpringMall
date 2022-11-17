@@ -47,9 +47,7 @@ public class OrderItem extends BaseEntity{
 	
 	private int count;
 	
-	@CreationTimestamp
 	private LocalDateTime regTime;
 	
-	@UpdateTimestamp
 	private LocalDateTime updateTime;
 }

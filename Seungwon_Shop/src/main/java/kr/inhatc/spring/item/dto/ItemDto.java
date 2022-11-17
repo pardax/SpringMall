@@ -3,12 +3,13 @@ package kr.inhatc.spring.item.dto;
 import java.time.LocalDateTime;
 
 import kr.inhatc.spring.item.constant.ItemSellStatus;
+import kr.inhatc.spring.utils.entity.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 @Getter
-public class ItemDto {
+public class ItemDto extends BaseEntity{
 	private Long id;	//상품코드
 	
 	private String itemNm;	//상품이름

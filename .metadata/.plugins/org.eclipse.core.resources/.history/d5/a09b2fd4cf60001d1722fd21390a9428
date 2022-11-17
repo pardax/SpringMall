@@ -1,5 +1,0 @@
-package kr.inhatc.spring.order.repository;
-
-public interface OrderItemRepository {
-
-}

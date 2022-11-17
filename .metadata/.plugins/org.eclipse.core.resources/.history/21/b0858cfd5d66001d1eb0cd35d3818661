@@ -1,0 +1,14 @@
+package kr.inhatc.spring.item.service;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import kr.inhatc.spring.item.repository.ItemImgRepository;
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+@Transactional
+public class ItemService {
+	
+}
