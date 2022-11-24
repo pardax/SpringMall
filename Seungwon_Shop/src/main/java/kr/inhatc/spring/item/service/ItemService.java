@@ -1,13 +1,19 @@
 package kr.inhatc.spring.item.service;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.EntityNotFoundException;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
+import org.thymeleaf.util.StringUtils;
 
 import kr.inhatc.spring.item.dto.ItemFormDto;
+import kr.inhatc.spring.item.dto.ItemImgDto;
 import kr.inhatc.spring.item.entity.Item;
 import kr.inhatc.spring.item.entity.ItemImg;
 import kr.inhatc.spring.item.repository.ItemImgRepository;
@@ -36,8 +42,25 @@ public class ItemService {
 			}
 			itemImgService.saveItemImg(itemImg, itemImgFileList.get(i));
 		}
-		
-		
 		return item.getId();
 	}
+	
+	public ItemFormDto getItemDetail(Long itemId) {
+		List<ItemImg> itemImgList = itemImgRepository.findByItemIdOrderByIdAsc(itemId);	
+		List<ItemImgDto> itemImgDtoList = new ArrayList<>();
+		
+		for(ItemImg itemImg : itemImgList) {
+			ItemImgDto itemImgDto = ItemImgDto.of(itemImg);
+			itemImgDtoList.add(itemImgDto);
+		}
+		
+		Item item = itemRepository.findById(itemId).orElseThrow(EntityNotFoundException::new);
+		
+		ItemFormDto itemFormDto = ItemFormDto.of(item);
+		itemFormDto.setItemImgDtoList(itemImgDtoList);
+		
+		return itemFormDto;
+	}
+	
+
 }

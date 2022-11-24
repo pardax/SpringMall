@@ -18,7 +18,7 @@ public class FileService {
 		String extendsion = oriFileName.substring(oriFileName.lastIndexOf("."));
 		String savedFileName = uuid.toString() + extendsion;
 		String fileUploadUrl = uploadPath + "/" + savedFileName;
-		
+		log.info("aaaa" + fileUploadUrl);
 		FileOutputStream fos = new FileOutputStream(fileUploadUrl);
 		fos.write(fileData);
 		fos.close();

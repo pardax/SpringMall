@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
-    <fullyQualifiedTypeName name="kr.inhatc.spring.config.AuditorAwareImpl"/>
-    <fullyQualifiedTypeName name="org.springframework.data.domain.AuditorAware"/>
-    <fullyQualifiedTypeName name="javax.persistence.EntityListeners"/>
-    <fullyQualifiedTypeName name="org.springframework.data.jpa.domain.support.AuditingEntityListener"/>
-    <fullyQualifiedTypeName name="javax.persistence.MappedSuperclass"/>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
-    <fullyQualifiedTypeName name="org.hibernate.annotations.CreationTimestamp"/>
-    <fullyQualifiedTypeName name="org.hibernate.annotations.UpdateTimestamp"/>
-    <fullyQualifiedTypeName name="org.springframework.data.annotation.LastModifiedDate"/>
     <fullyQualifiedTypeName name="org.springframework.data.annotation.CreatedDate"/>
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="org.springframework.data.annotation.LastModifiedBy"/>
@@ -32,8 +22,6 @@
     <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.NotBlank"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
-    <fullyQualifiedTypeName name="kr.inhatc.spring.item.dto.ItemImgDto"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.modelmapper.ModelMapper"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="kr.inhatc.spring.utils.entity.BaseEntity"/>
@@ -44,20 +32,32 @@
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="lombok.extern.slf4j.Slf4j"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
-    <fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
     <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
-    <fullyQualifiedTypeName name="kr.inhatc.spring.item.service.FileService"/>
     <fullyQualifiedTypeName name="org.codehaus.groovy.util.StringUtil"/>
-    <fullyQualifiedTypeName name="org.thymeleaf.util.StringUtils"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="kr.inhatc.spring.item.repository.ItemRepository"/>
     <fullyQualifiedTypeName name="kr.inhatc.spring.item.repository.ItemImgRepository"/>
     <fullyQualifiedTypeName name="kr.inhatc.spring.item.service.ItemImgService"/>
-    <fullyQualifiedTypeName name="kr.inhatc.spring.item.dto.ItemFormDto"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
     <fullyQualifiedTypeName name="kr.inhatc.spring.item.entity.Item"/>
-    <fullyQualifiedTypeName name="kr.inhatc.spring.item.entity.ItemImg"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="javax.validation.Valid"/>
+    <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="kr.inhatc.spring.item.entity.ItemImg"/>
+    <fullyQualifiedTypeName name="net.bytebuddy.description.ModifierReviewable.OfAbstraction"/>
+    <fullyQualifiedTypeName name="kr.inhatc.spring.item.dto.ItemImgDto"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="kr.inhatc.spring.item.dto.ItemFormDto"/>
+    <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityNotFoundException"/>
+    <fullyQualifiedTypeName name="org.thymeleaf.util.StringUtils"/>
+    <fullyQualifiedTypeName name="kr.inhatc.spring.item.service.ItemService"/>
+    <fullyQualifiedTypeName name="kr.inhatc.spring.item.service.FileService"/>
 </qualifiedTypeNameHistroy>
