@@ -1,0 +1,13 @@
+package kr.inhatc.spring.item.repository;
+
+import java.awt.print.Pageable;
+
+import org.springframework.data.domain.Page;
+
+import kr.inhatc.spring.item.dto.ItemSearchDto;
+import kr.inhatc.spring.item.entity.Item;
+
+public interface ItemRepositoryCustom {
+
+	Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable);
+}

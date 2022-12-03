@@ -1,12 +1,16 @@
 package kr.inhatc.spring.item.entity;
 
 import kr.inhatc.spring.item.constant.ItemSellStatus;
+import kr.inhatc.spring.item.dto.ItemFormDto;
+import kr.inhatc.spring.item.repository.ItemRepository;
 import kr.inhatc.spring.utils.entity.BaseEntity;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityNotFoundException;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
@@ -14,6 +18,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
+
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -50,5 +56,14 @@ public class Item extends BaseEntity{
 	@Column(nullable = false)
 	private String itemDetail; //상품상세설명
 	
+	public void updateItem(ItemFormDto itemFormDto) {
+		this.itemNm = itemFormDto.getItemNm();
+		this.price = itemFormDto.getPrice();
+		this.stockNumber = itemFormDto.getStockNumber();
+		this.itemDetail = itemFormDto.getItemDetail();
+		this.itemSellStatus = itemFormDto.getItemSellStatus();
+	}
+	
+
 	
 }

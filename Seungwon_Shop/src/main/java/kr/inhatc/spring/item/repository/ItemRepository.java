@@ -10,7 +10,7 @@ import org.springframework.data.repository.query.Param;
 import kr.inhatc.spring.item.entity.Item;
 
 public interface ItemRepository extends JpaRepository<Item, Long>, 
-				QuerydslPredicateExecutor<Item>{
+				QuerydslPredicateExecutor<Item>, ItemRepositoryCustom {
 	
 	List<Item> findByItemNm(String iTemNm);
 	

@@ -7,6 +7,8 @@ import java.util.List;
 
 import javax.persistence.EntityNotFoundException;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -14,6 +16,7 @@ import org.thymeleaf.util.StringUtils;
 
 import kr.inhatc.spring.item.dto.ItemFormDto;
 import kr.inhatc.spring.item.dto.ItemImgDto;
+import kr.inhatc.spring.item.dto.ItemSearchDto;
 import kr.inhatc.spring.item.entity.Item;
 import kr.inhatc.spring.item.entity.ItemImg;
 import kr.inhatc.spring.item.repository.ItemImgRepository;
@@ -60,6 +63,21 @@ public class ItemService {
 		itemFormDto.setItemImgDtoList(itemImgDtoList);
 		
 		return itemFormDto;
+	}
+	
+	public Long updateItem(ItemFormDto itemFormDto, List<MultipartFile> itemImgFileList) throws IOException {
+		Item item = itemRepository.findById(itemFormDto.getId()).orElseThrow(EntityNotFoundException::new);
+		item.updateItem(itemFormDto);
+		List<Long> itemImgIds = itemFormDto.getItemImgIds();
+		
+		for(int i = 0; i < itemImgFileList.size(); i++) {
+			itemImgService.updateItemImg(itemImgIds.get(i), itemImgFileList.get(i));
+		}
+		return item.getId();
+	}
+	
+	public Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable){
+		return itemRepository.getAdminItemPage(itemSearchDto, pageable);
 	}
 	
 
